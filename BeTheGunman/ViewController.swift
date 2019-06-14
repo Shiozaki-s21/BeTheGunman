@@ -69,6 +69,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     kightNode.physicsBody = SCNPhysicsBody(type: .kinematic, shape: shape)
     kightNode.physicsBody?.isAffectedByGravity = false
     kightNode.position = SCNVector3Make(0, -1, 3.5)
+    kightNode.rotation = SCNVector4(0, 1, 0, 1 * Double.pi)
     
     return kightNode
   }()
@@ -77,16 +78,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     let bulletNode: SCNNode = SCNNode()
     let bullet = SCNScene(named: "art.scnassets/bullet.scn")!
     var nodeArray = bullet.rootNode.childNodes
-    bulletNode.name = "bullet"
+    bulletNode.name = "ball"
     bulletNode.position = SCNVector3(0, 0, 0)
     for childNode in nodeArray {
       bulletNode.addChildNode(childNode as SCNNode)
     }
     
     let shape = SCNPhysicsShape(node: bulletNode, options: nil)
-    bulletNode.physicsBody = SCNPhysicsBody(type: .kinematic, shape: shape)
+    bulletNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: shape)
     bulletNode.physicsBody?.isAffectedByGravity = false
     bulletNode.position = SCNVector3Make(0, 0, 0.1)
+    bulletNode.physicsBody?.contactTestBitMask = 1
     return bulletNode
   }()
   
@@ -129,21 +131,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // get tapped time
     tappedTime = Date().timeIntervalSince(startTime)
     print(tappedTime)
-        let ball = SCNSphere(radius: 0.1)
-        ball.firstMaterial?.diffuse.contents = UIColor.blue
+//        let ball = SCNSphere(radius: 0.1)
+//        ball.firstMaterial?.diffuse.contents = UIColor.blue
+//
+//        let node = SCNNode(geometry: ball)
+//        node.name = "ball"
+//        node.position = SCNVector3Make(0, 0.1, 0)
+//
+//        // add PhysicsShape
+//        let shape = SCNPhysicsShape(geometry: ball, options: nil)
+//        node.physicsBody = SCNPhysicsBody(type: .dynamic, shape: shape)
+//        node.physicsBody?.contactTestBitMask = 1
+//        node.physicsBody?.isAffectedByGravity = false
     
-        let node = SCNNode(geometry: ball)
-        node.name = "ball"
-        node.position = SCNVector3Make(0, 0.1, 0)
-    
-        // add PhysicsShape
-        let shape = SCNPhysicsShape(geometry: ball, options: nil)
-        node.physicsBody = SCNPhysicsBody(type: .dynamic, shape: shape)
-        node.physicsBody?.contactTestBitMask = 1
-        node.physicsBody?.isAffectedByGravity = false
-    
-//    let node = bulletNode
-//    node.name = "bullet"
+    let node = bulletNode
+    node.name = "ball"
     
     if let camera = sceneView.pointOfView {
       node.position = camera.position
