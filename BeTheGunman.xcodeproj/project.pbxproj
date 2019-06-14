@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0AE19A22AF0D330054F53B /* GunmanGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0AE19922AF0D330054F53B /* GunmanGame.swift */; };
+		0C0AE19D22B31B7A0054F53B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0AE19C22B31B7A0054F53B /* CoreMotion.framework */; };
 		0C4B5BF822ADFC1400B7DFA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B5BF722ADFC1400B7DFA3 /* AppDelegate.swift */; };
 		0C4B5BFA22ADFC1400B7DFA3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C4B5BF922ADFC1400B7DFA3 /* art.scnassets */; };
 		0C4B5BFC22ADFC1400B7DFA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B5BFB22ADFC1400B7DFA3 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C0AE19922AF0D330054F53B /* GunmanGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GunmanGame.swift; sourceTree = "<group>"; };
+		0C0AE19C22B31B7A0054F53B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		0C4B5BF422ADFC1400B7DFA3 /* BeTheGunman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeTheGunman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4B5BF722ADFC1400B7DFA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C4B5BF922ADFC1400B7DFA3 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0AE19D22B31B7A0054F53B /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0AE19B22B31B790054F53B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C0AE19C22B31B7A0054F53B /* CoreMotion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0C4B5BEB22ADFC1400B7DFA3 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +96,7 @@
 				0C4B5C0D22ADFC1500B7DFA3 /* BeTheGunmanTests */,
 				0C4B5C1822ADFC1500B7DFA3 /* BeTheGunmanUITests */,
 				0C4B5BF522ADFC1400B7DFA3 /* Products */,
+				0C0AE19B22B31B790054F53B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +117,7 @@
 				0C4B5BF922ADFC1400B7DFA3 /* art.scnassets */,
 				0C4B5BFB22ADFC1400B7DFA3 /* ViewController.swift */,
 				0C4B5BFD22ADFC1400B7DFA3 /* Main.storyboard */,
+				0C0AE19922AF0D330054F53B /* GunmanGame.swift */,
 				0C4B5C0022ADFC1500B7DFA3 /* Assets.xcassets */,
 				0C4B5C0222ADFC1500B7DFA3 /* LaunchScreen.storyboard */,
 				0C4B5C0522ADFC1500B7DFA3 /* Info.plist */,
@@ -262,6 +277,7 @@
 			files = (
 				0C4B5BFC22ADFC1400B7DFA3 /* ViewController.swift in Sources */,
 				0C4B5BF822ADFC1400B7DFA3 /* AppDelegate.swift in Sources */,
+				0C0AE19A22AF0D330054F53B /* GunmanGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
